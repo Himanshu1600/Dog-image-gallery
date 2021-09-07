@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/dog-image-gallery/static/css/main.da247a2c.chunk.css",
+    "main.js": "/dog-image-gallery/static/js/main.7644a401.chunk.js",
+    "main.js.map": "/dog-image-gallery/static/js/main.7644a401.chunk.js.map",
+    "runtime-main.js": "/dog-image-gallery/static/js/runtime-main.6b7fce51.js",
+    "runtime-main.js.map": "/dog-image-gallery/static/js/runtime-main.6b7fce51.js.map",
+    "static/js/2.38d61b94.chunk.js": "/dog-image-gallery/static/js/2.38d61b94.chunk.js",
+    "static/js/2.38d61b94.chunk.js.map": "/dog-image-gallery/static/js/2.38d61b94.chunk.js.map",
+    "index.html": "/dog-image-gallery/index.html",
+    "static/css/main.da247a2c.chunk.css.map": "/dog-image-gallery/static/css/main.da247a2c.chunk.css.map",
+    "static/js/2.38d61b94.chunk.js.LICENSE.txt": "/dog-image-gallery/static/js/2.38d61b94.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6b7fce51.js",
+    "static/js/2.38d61b94.chunk.js",
+    "static/css/main.da247a2c.chunk.css",
+    "static/js/main.7644a401.chunk.js"
+  ]
+}
