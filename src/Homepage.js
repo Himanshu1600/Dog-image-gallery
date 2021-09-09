@@ -15,15 +15,21 @@ function Homepage() {
   };
 
   const handlesubbreed = (e) => {
-    setcurrentSubbreed(e.target.value);
+    setcurrentSubbreed(`/${e.target.value}`);
     // console.log(currentSubbreed);
   };
 
   useEffect(() => {
-    getbreedimageApi();
     getsubbreedApi();
+    getbreedimageApi();
     setgetimg(false);
-  }, [currentbreed, currentSubbreed]);
+  }, [currentbreed]);
+
+  useEffect(() => {
+    getsubbreedApi();
+    getbreedimageApi();
+    setgetimg(false);
+  }, [currentSubbreed]);
 
   useEffect(() => {
     getbreedApi();
@@ -40,17 +46,15 @@ function Homepage() {
   const getsubbreedApi = async () => {
     let subdata = await fetch(`https://dog.ceo/api/breed/${currentbreed}/list`);
     let parsedata = await subdata.json();
-
     // console.log(parsedata.message);
+    !parsedata.message.length && setcurrentSubbreed("");
     setsubbreed(parsedata.message);
   };
   const getbreedimageApi = async () => {
-    let Url = currentSubbreed.length
-      ? `https://dog.ceo/api/breed/${currentbreed}/${currentSubbreed}/images/random/20`
-      : `https://dog.ceo/api/breed/${currentbreed}/images/random/15`;
+    let Url = `https://dog.ceo/api/breed/${currentbreed}${currentSubbreed}/images/random/10`;
     let subdata = await fetch(Url);
     let parsedata = await subdata.json();
-    let newimg = Object.values(parsedata.message);
+    let newimg = await Object.values(parsedata.message);
     // console.log(newimg);
     setbreedimg(newimg);
   };
